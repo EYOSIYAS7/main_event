@@ -1,6 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
+import { SignedOut, SignUpButton } from "@clerk/nextjs";
+import { Button } from "../ui/button";
+import Link from "next/link";
+
 const Header = () => {
   return (
     <header className="flex items-center justify-between px-4 py-3 md:px-6">
@@ -13,9 +17,15 @@ const Header = () => {
           className="h-8 w-auto md:h-10"
         />
       </div>
-      <button className="rounded-lg bg-neutral-800 px-4 py-2 text-sm font-medium text-white hover:bg-neutral-900 md:text-base">
-        Login
-      </button>
+      <div>
+        <SignedOut>
+          <SignUpButton>
+            <Button variant="outline" className="hidden md:inline-flex">
+              <Link href="/sign-up">Login</Link>
+            </Button>
+          </SignUpButton>
+        </SignedOut>
+      </div>
     </header>
   );
 };
