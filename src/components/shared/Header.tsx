@@ -1,9 +1,11 @@
 import React from "react";
 import Image from "next/image";
 
-import { SignedOut, SignUpButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignUpButton, UserButton } from "@clerk/nextjs";
 import { Button } from "../ui/button";
 import Link from "next/link";
+import MobileNav from "./MobileNav";
+import NavItems from "./NavItems";
 
 const Header = () => {
   return (
@@ -17,11 +19,20 @@ const Header = () => {
           className="h-8 w-auto md:h-10"
         />
       </div>
+      <SignedIn>
+        <nav className="md:flex between hidden w-full max-w-xs">
+          <NavItems />
+        </nav>
+      </SignedIn>
       <div>
+        <SignedIn>
+          <UserButton />
+          <MobileNav />
+        </SignedIn>
         <SignedOut>
           <SignUpButton>
             <Button variant="outline" className="hidden md:inline-flex">
-              <Link href="/sign-up">Login</Link>
+              Sign up
             </Button>
           </SignUpButton>
         </SignedOut>

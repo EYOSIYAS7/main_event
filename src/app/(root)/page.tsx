@@ -33,15 +33,39 @@ export default function Home() {
             </div>
             <div className="md:w-1/2">
               <div className="relative h-[400px] w-full">
-                <div className="absolute top-0 right-0 w-full h-full bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden shadow-2xl">
-                  <div className="p-6">
-                    <div className="bg-white/20 h-40 rounded-lg mb-4 animate-pulse"></div>
-                    <div className="bg-white/20 h-6 rounded-lg mb-3 w-3/4"></div>
-                    <div className="bg-white/20 h-6 rounded-lg mb-3 w-1/2"></div>
-                    <div className="bg-white/20 h-6 rounded-lg w-2/3"></div>
-                    <div className="mt-6 flex gap-3">
-                      <div className="bg-purple-500 h-10 w-24 rounded-lg"></div>
-                      <div className="bg-white/20 h-10 w-24 rounded-lg"></div>
+                <div className="absolute top-0 right-0 w-full h-full bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden shadow-2xl flex flex-col">
+                  <img
+                    src="/assets/images/hero.png"
+                    alt="Featured Event"
+                    className="w-full h-48 object-cover rounded-t-xl"
+                  />
+                  <div className="p-6 flex-1 flex flex-col">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="bg-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                        Featured
+                      </span>
+                      <span className="text-sm text-gray-200">
+                        Jul 22, 2024
+                      </span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      Tech Conference 2024
+                    </h3>
+                    <p className="text-white/80 mb-4">
+                      Join industry leaders and innovators for a day of
+                      insightful talks, networking, and the latest in technology
+                      trends.
+                    </p>
+                    <div className="flex gap-3 mt-auto">
+                      <Button className="bg-purple-600 hover:bg-purple-700 text-white">
+                        View Details
+                      </Button>
+                      <Button
+                        variant="outline"
+                        className="text-white border-white hover:bg-white/10"
+                      >
+                        Register
+                      </Button>
                     </div>
                   </div>
                 </div>
