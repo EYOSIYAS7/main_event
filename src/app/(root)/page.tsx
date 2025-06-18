@@ -3,7 +3,7 @@ export default function Home() {
   return (
     <main className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-gray-950 to-yellow-500 py-20">
+      <section className="bg-gradient-to-r from-gray-950 to-gray-800 py-20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="md:w-1/2 space-y-6">

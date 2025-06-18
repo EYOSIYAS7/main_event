@@ -13,7 +13,7 @@ import NavItems from "./NavItems";
 const MobileNav = () => {
   return (
     <div>
-      <nav>
+      <nav className="md:hidden">
         <Sheet>
           <SheetTrigger className="align-middle">
             <Image
