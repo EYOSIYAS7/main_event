@@ -1,6 +1,6 @@
-import { Schema, models, model} from "mongoose";
-import { title } from "process";
-export interface IEvent {
+import { Schema, models, model, Document} from "mongoose";
+
+export interface IEvent extends Document {
     _id: string;
     title: string;
     description?: string;
